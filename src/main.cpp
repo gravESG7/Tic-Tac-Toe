@@ -1,7 +1,7 @@
 /*----------------------------------------------------------------------------*/
 /*                                                                            */
 /*    Module:       main.cpp                                                  */
-/*    Author:       ellio                                                     */
+/*    Author:       elliott                                                   */
 /*    Created:      8/16/2025, 1:44:31 PM                                     */
 /*    Description:  V5 project                                                */
 /*                                                                            */
