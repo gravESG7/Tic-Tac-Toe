@@ -84,7 +84,7 @@ if (Brain.Screen.pressing()){
 
     //Middle Left 
      if (x >= 1 && x <= (1 + 200) && (y >= 100 && y <= (100 + 40))) {
-        Brain.Screen.setCursor(200-20, 140-10);
+        Brain.Screen.setCursor(7, 20);
         Brain.Screen.print("X");
         float f = false;
     };
@@ -167,7 +167,7 @@ if (Brain.Screen.pressing()){
     if (x >= 240 && x <= (240 + 45) && (y >= 100 && y <= (100 + 40))) {
         Brain.Screen.setCursor(200+20, 140-10);
         Brain.Screen.print("O");
-        float f = true;
+         f = true;
      };
 
     //Bottom Left 
