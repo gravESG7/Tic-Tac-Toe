@@ -12,14 +12,15 @@ using namespace vex;
 
 // A global instance of vex::brain used for printing to the V5 brain screen
 vex::brain       Brain;
-
+int f;
 // define your global instances of motors and other devices here
 
 
 int main() {
 
     //created value to alternate x's and o's 
-    float f = true;
+      
+    
     //create the grid for game
     Brain.Screen.setPenColor(white);
     Brain.Screen.drawLine( 180+40, 60, 180+40, 180 );
@@ -27,7 +28,7 @@ int main() {
     Brain.Screen.drawLine( 180, 60+40, 300, 60+40 );
     Brain.Screen.drawLine( 180, 180-40, 300, 180-40 );
     Brain.Screen.setFillColor(red);
-    Brain.Screen.drawRectangle( 460, 220, 480, 240);
+    Brain.Screen.drawRectangle( 440, 550, 420, 240);
     Brain.Screen.setCursor(420, 220);
     Brain.Screen.print("RESET");
     Brain.Screen.setFillColor(transparent);
@@ -37,7 +38,7 @@ if (Brain.Screen.pressing()){
      int x = Brain.Screen.xPosition();
      int y = Brain.Screen.yPosition();  
 
-   if (x >= 460 && x <= (460 + 20) && (y >= 220 && y <= (220 + 20))) {
+   if (x >= 400 && x <= (400 + 20) && (y >= 220 && y <= (220 + 20))) {
      Brain.Screen.clearScreen();
      Brain.Screen.setPenColor(white);
      Brain.Screen.drawLine( 180+40, 60, 180+40, 180 );
@@ -45,11 +46,11 @@ if (Brain.Screen.pressing()){
      Brain.Screen.drawLine( 180, 60+40, 300, 60+40 );
      Brain.Screen.drawLine( 180, 180-40, 300, 180-40 );
      Brain.Screen.setFillColor(red);
-     Brain.Screen.drawRectangle( 460, 220, 480, 240);
+     Brain.Screen.drawRectangle( 1, 1, 420, 240);
      Brain.Screen.setCursor(420, 220);
      Brain.Screen.print("RESET");
      Brain.Screen.setFillColor(transparent);
-     float f = true; 
+      f = true; 
     };
 };
 
@@ -65,103 +66,105 @@ if (Brain.Screen.pressing()){
 
      //Top Left 
      if (x >= 1 && x <= (1 + 200) && (y >= 1 && y <= (1 + 100))) {
-        Brain.Screen.setCursor(200-20, 100-10);
+        Brain.Screen.setCursor(4.5,20);
         Brain.Screen.print("X");
-        float f = false;
+         f = false;
     };
      //Top Middle
      if (x >= 200 && x <= (200 + 40) && (y >= 1 && y <= (1 + 100))) {
         Brain.Screen.setCursor(200, 100-10);
         Brain.Screen.print("X");
-        float f = false;
+         f = false;
     };
     //Top Right
     if (x >= 240 && x <= (240 + 45) && (y >= 1 && y <= (1 + 100))) {
         Brain.Screen.setCursor(200+20, 100-10);
         Brain.Screen.print("X");
-        float f = false;
+         f = false;
     };
-
+//
+//
+//
+//
+//
     //Middle Left 
      if (x >= 1 && x <= (1 + 200) && (y >= 100 && y <= (100 + 40))) {
         Brain.Screen.setCursor(7, 20);
         Brain.Screen.print("X");
-        float f = false;
+         f = false;
     };
      //Middle
      if (x >= 200 && x <= (200 + 40) && (y >= 100 && y <= (100 + 40))) {
         Brain.Screen.setCursor(200, 140-10);
         Brain.Screen.print("X");
-        float f = false;
+         f = false;
     }
     //Middle Right
     if (x >= 240 && x <= (240 + 45) && (y >= 100 && y <= (100 + 40))) {
         Brain.Screen.setCursor(200+20, 140-10);
         Brain.Screen.print("X");
-        float f = false;
+         f = false;
      };
 
     //Bottom Left 
      if (x >= 1 && x <= (1 + 200) && (y >= 140 && y <= (140 + 45))) {
         Brain.Screen.setCursor(200-20, 180-10);
         Brain.Screen.print("X");
-        float f = false;
+         f = false;
     };
      //Bottom Middle
      if (x >= 200 && x <= (200 + 40) && (y >= 140 && y <= (140 + 45))) {
         Brain.Screen.setCursor(200, 180-10);
         Brain.Screen.print("X");
-        float f = false;
+         f = false;
     };
     //Bottom Right
     if (x >= 240 && x <= (240 + 45) && (y >= 140 && y <= (140 + 45))) {
         Brain.Screen.setCursor(200+20, 180-10);
         Brain.Screen.print("X");
-        float f = false;
+         f = false;
      };
     };
-    };
-
-
-
-
-
-    //Print O's when f=false
-    while(f = false) {
+ }  
+ 
+ 
+ while (f = false) {
+     
+         //Print O's when f=false
         if (Brain.Screen.pressing()){
      int x = Brain.Screen.xPosition();
      int y = Brain.Screen.yPosition();  
 
      //Top Left 
      if (x >= 1 && x <= (1 + 200) && (y >= 1 && y <= (1 + 100))) {
-        Brain.Screen.setCursor(200-20, 100-10);
+        Brain.Screen.setCursor(4.5, 20);
         Brain.Screen.print("O");
-        float f = true;
-    };
+         f = true;
+      };
      //Top Middle
      if (x >= 200 && x <= (200 + 40) && (y >= 1 && y <= (1 + 100))) {
         Brain.Screen.setCursor(200, 100-10);
-        Brain.Screen.print("O");
-        float f = true;
-    };
-    //Top Right
-    if (x >= 240 && x <= (240 + 45) && (y >= 1 && y <= (1 + 100))) {
+         Brain.Screen.print("O");
+         f = true;
+     };
+     //Top Right
+     if (x >= 240 && x <= (240 + 45) && (y >= 1 && y <= (1 + 100))) {
         Brain.Screen.setCursor(200+20, 100-10);
         Brain.Screen.print("O");
-        float f = true;
-    };
+         f = true;
+     };
 
-    //Middle Left 
+     //Middle Left 
      if (x >= 1 && x <= (1 + 200) && (y >= 100 && y <= (100 + 40))) {
-        Brain.Screen.setCursor(200-20, 140-10);
+        Brain.Screen.setCursor(7, 20);
         Brain.Screen.print("O");
-        float f = true;
+         f = true;
     };
      //Middle
      if (x >= 200 && x <= (200 + 40) && (y >= 100 && y <= (100 + 40))) {
         Brain.Screen.setCursor(200, 140-10);
         Brain.Screen.print("O");
-        float f = true;
+         f = true;
     }
     //Middle Right
     if (x >= 240 && x <= (240 + 45) && (y >= 100 && y <= (100 + 40))) {
@@ -174,19 +177,19 @@ if (Brain.Screen.pressing()){
      if (x >= 1 && x <= (1 + 200) && (y >= 140 && y <= (140 + 45))) {
         Brain.Screen.setCursor(200-20, 180-10);
         Brain.Screen.print("O");
-        float f = true;
+         f = true;
     };
      //Bottom Middle
      if (x >= 200 && x <= (200 + 40) && (y >= 140 && y <= (140 + 45))) {
         Brain.Screen.setCursor(200, 180-10);
         Brain.Screen.print("O");
-        float f = true;
+         f = true;
     };
     //Bottom Right
     if (x >= 240 && x <= (240 + 45) && (y >= 140 && y <= (140 + 45))) {
         Brain.Screen.setCursor(200+20, 180-10);
         Brain.Screen.print("O");
-        float f = true;
+         f = true;
      };
     };
     };
@@ -194,4 +197,4 @@ if (Brain.Screen.pressing()){
         // Allow other tasks to run
         this_thread::sleep_for(10);
     
-}
+};
