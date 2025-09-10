@@ -12,14 +12,14 @@ using namespace vex;
 
 // A global instance of vex::brain used for printing to the V5 brain screen
 vex::brain       Brain;
-int f;
+
 // define your global instances of motors and other devices here
 
 
 int main() {
 
     //created value to alternate x's and o's 
-      
+      int f;
     
     //create the grid for game
     Brain.Screen.setPenColor(white);
@@ -66,7 +66,7 @@ if (Brain.Screen.pressing()){
 
      //Top Left 
      if (x >= 1 && x <= (1 + 200) && (y >= 1 && y <= (1 + 100))) {
-        Brain.Screen.setCursor(4.5,20);
+        Brain.Screen.setCursor(4,20);
         Brain.Screen.print("X");
          f = 0;
     };
@@ -137,7 +137,7 @@ if (Brain.Screen.pressing()){
 
      //Top Left 
      if (x >= 1 && x <= (1 + 200) && (y >= 1 && y <= (1 + 100))) {
-        Brain.Screen.setCursor(4.5, 20);
+        Brain.Screen.setCursor(4, 20);
         Brain.Screen.print("O");
          f = 1;
       };
